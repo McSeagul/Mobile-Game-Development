@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: d69c509b410e87445be6ea4d491027b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2159463884954918184
+    second: JumpControls_0
+  - first:
+      213: 2926774280788259958
+    second: JumpControls_1
+  - first:
+      213: 3868739505014781863
+    second: JumpControls_2
+  - first:
+      213: 2304252210286721669
+    second: JumpControls_3
+  - first:
+      213: 3285597358647510707
+    second: JumpControls_4
+  - first:
+      213: -7138524109132090138
+    second: JumpControls_5
+  - first:
+      213: -430377668201736722
+    second: JumpControls_6
+  - first:
+      213: -6997923928150500470
+    second: JumpControls_7
+  - first:
+      213: -2518341938788280023
+    second: JumpControls_8
+  - first:
+      213: 5474012613198767377
+    second: JumpControls_9
+  - first:
+      213: 4118995286384651349
+    second: JumpControls_10
+  - first:
+      213: 7257206047728241777
+    second: JumpControls_11
+  - first:
+      213: -3426032975808204647
+    second: JumpControls_12
+  - first:
+      213: 7723653241792600096
+    second: JumpControls_13
+  - first:
+      213: 1290504989251567601
+    second: JumpControls_14
+  - first:
+      213: -6672898988812388850
+    second: JumpControls_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JumpControls_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 122
+        width: 477
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dd50846f4f7fd10800000000000000
+      internalID: 2159463884954918184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3d6c587e007cc2c4f8ec1fae23ee9525
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JumpControls_0: 2159463884954918184
+      JumpControls_1: 2926774280788259958
+      JumpControls_10: 4118995286384651349
+      JumpControls_11: 7257206047728241777
+      JumpControls_12: -3426032975808204647
+      JumpControls_13: 7723653241792600096
+      JumpControls_14: 1290504989251567601
+      JumpControls_15: -6672898988812388850
+      JumpControls_2: 3868739505014781863
+      JumpControls_3: 2304252210286721669
+      JumpControls_4: 3285597358647510707
+      JumpControls_5: -7138524109132090138
+      JumpControls_6: -430377668201736722
+      JumpControls_7: -6997923928150500470
+      JumpControls_8: -2518341938788280023
+      JumpControls_9: 5474012613198767377
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
