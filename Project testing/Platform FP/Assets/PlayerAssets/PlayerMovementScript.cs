@@ -19,16 +19,42 @@ public class PlayerMovementScript : MonoBehaviour
     public float AtkTime = 0.9f;
     public bool flipX;
     public bool IsAttacking;
+
+    //new- input system
+    public InputActionAsset InputActions;
+
+    private InputAction m_moveAction;
+    private InputAction m_jumpAction;
+
+    private Vector2 m_moveAmt;
+
+    private void OnEnable()
+    {
+        InputActions.FindActionMap("Player").Enable();
+    }
+    private void OnDisable()
+    {
+        InputActions.FindActionMap("Player").Disable();
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playersprite = GetComponent<SpriteRenderer>();
+        m_moveAction = InputSystem.actions.FindAction("Move");
+        m_jumpAction = InputSystem.actions.FindAction("Jump");
     }
     // Update is called once per frame
     void Update()
     {   
+        m_moveAmt = m_moveAction.ReadValue<Vector2>();
+
         float xMovement = rb.linearVelocity.x;
+
+
+
+
         //Horizontal Movement (Doesnt work if stationary slash is active to avoid footsliding)
         if(animator.GetBool("moveSlash") != true)
         {
@@ -39,14 +65,14 @@ public class PlayerMovementScript : MonoBehaviour
         }
             
 
-        if (Input.GetButtonDown("Jump") && grounded == true)
+        if (m_jumpAction.WasPressedThisFrame() && grounded == true)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
         }
         if (grounded == false)
         {
-            if (Input.GetButtonDown("Jump") && doubleJump == true)
+            if (m_jumpAction.WasPressedThisFrame() && doubleJump == true)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 doubleJump = false;
@@ -113,7 +139,13 @@ public class PlayerMovementScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-            rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
-            animator.SetFloat("yVelocity", rb.linearVelocity.y);
+        Walking();
+            
+        //rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+    }
+    private void Walking()
+    {
+        rb.linearVelocity = new Vector2(m_moveAmt.x * moveSpeed, rb.linearVelocityY);
     }
 }
