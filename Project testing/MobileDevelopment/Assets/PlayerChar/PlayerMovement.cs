@@ -8,6 +8,10 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    void Update()
+    {
+        
+    }
     public void LeftMove()
     {
         rb.linearVelocityX = -moveSpeed;
