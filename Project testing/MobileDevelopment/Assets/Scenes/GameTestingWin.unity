@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 710941497}
   - component: {fileID: 710941496}
   - component: {fileID: 710941495}
+  - component: {fileID: 710941499}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -419,6 +420,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &710941499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710941494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39c9ff6522fa8f4eb9cf44ee3e20d6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CamFollow
+  FollowTarget: {fileID: 1480653458}
+  offsetY: 0
+  smoothDampTime: 0.2
 --- !u!1 &1251158226
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,9 +546,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1480653458}
   - component: {fileID: 1480653457}
-  - component: {fileID: 1480653459}
   - component: {fileID: 1480653461}
   - component: {fileID: 1480653460}
+  - component: {fileID: 1480653459}
+  - component: {fileID: 1480653462}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -608,8 +625,8 @@ Transform:
   m_GameObject: {fileID: 1480653456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 4.05, z: 0}
-  m_LocalScale: {x: 0.8153159, y: 1.2764586, z: 0.8153159}
+  m_LocalPosition: {x: 0, y: 2.0211, z: 0}
+  m_LocalScale: {x: 0.6417857, y: 1.0047797, z: 0.6417857}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -699,6 +716,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1480653462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480653456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d1d8604ff5a2a46a4f363be35cd93a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRules
+  sprite: {fileID: 0}
+  cam: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
