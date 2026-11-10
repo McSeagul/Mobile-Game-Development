@@ -28,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
         foreach (Touch touch in Touch.activeTouches) 
         {
             Vector2 pos = touch.screenPosition;
-            /*pos.x = (pos.x - width) / width;
-            pos.y = (pos.y - height) / height;*/
             Debug.Log("Touch X: " + pos.x);
             Debug.Log("Touch Y: " + pos.y);
             if (pos.x < width)
@@ -54,19 +52,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocityX = 0f;
         }
-
-        //OlD INPUT SYSTEM CODE
-
-        /*if(Input.touchCount > 0)
-        {
-            UnityEngine.Touch touch = Input.GetTouch(0);
-
-            Vector2 pos = touch.position;
-            pos.x = (pos.x - width) / width;
-            pos.y = (pos.y - height) / height;
-            Debug.Log("Touch X: " + pos.x);
-            Debug.Log("Touch Y: " + pos.y);
-        }*/
 
     }
 }
