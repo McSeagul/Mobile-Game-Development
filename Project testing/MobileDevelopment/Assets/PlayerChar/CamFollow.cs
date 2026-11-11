@@ -7,10 +7,10 @@ public class CamFollow : MonoBehaviour
     public Transform FollowTarget;
     //set player as followtarget.
 
+
+    [Header("Camera Smooth Settings")]
     public float offsetY = 0f;
-
     public float smoothDampTime = 0.2f;
-
     float velocity;
 
     //ensures the character has already began its movement before camera moves
@@ -23,5 +23,7 @@ public class CamFollow : MonoBehaviour
         pos.y = Mathf.SmoothDamp(pos.y, targetHeight, ref velocity, smoothDampTime);
 
         transform.position = pos;
+
+        
     }
 }

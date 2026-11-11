@@ -1,22 +1,22 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class PlayerRules : MonoBehaviour
 {
     private float xMin, xMax;
-    private float yMin;
     float spriteSize;
-    float spriteHeight; 
+    float spriteHeight;
     float xValid;
+
+
+    [Header("Reference to Pad")]
+    //References to bouncepad scripts to rewrite applied force (applied force float used to simplify writing across scripts.)
+    public float forceApplied;
     public float linearVelY;
 
 
-
-    //References to bouncepad scripts to rewrite applied force (applied force float used to simplify writing across scripts.)
-    public float forceApplied;
-
-
-
+    [Header("General Data")]
     public SpriteRenderer sprite;
     public Camera cam;
     public Rigidbody2D rb;
@@ -50,12 +50,24 @@ public class PlayerRules : MonoBehaviour
         xValid = Mathf.Clamp(transform.position.x, xMin, xMax);
 
         transform.position = new Vector2(xValid, transform.position.y);
+
+        
     }
     void FixedUpdate()
     {
         //Grab player velocity for bounce pad refernece.
-        linearVelY = rb.linearVelocity.y; 
+        linearVelY = rb.linearVelocity.y;
 
+        //Uses RB and is gravity scale dependant hence why it is in fixed update. 
+        Vector2 correctedPlayerPosY = new Vector2(transform.position.x, transform.position.y + spriteHeight); //Creates transform pos account for player height.
+        Vector3 pos = cam.WorldToViewportPoint(correctedPlayerPosY); //Corrected transform input into the viewport point, which then calculates whether or not the player is now completely offscreen.
+        if (pos.y < 0.0)
+        {
+            Debug.Log("PlayerLeftGameScope");
+            //Reference endstatelevel in PlayerHP script
+
+            Time.timeScale = 0f; //TempTestCode out of player scope.
+        }
     }
     public void appliedForce()
     { 
