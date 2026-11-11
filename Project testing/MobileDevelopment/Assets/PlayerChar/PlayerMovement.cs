@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
         int leftTouches = 0;
         int rightTouches = 0;
+
+        //Finds touch input and screen side. Accounts for multiple inputs. 
         foreach (Touch touch in Touch.activeTouches) 
         {
             Vector2 pos = touch.screenPosition;
@@ -39,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
                 rightTouches++;
             }
         }
-
+        //Checks left and right touch input, accounts for multiple inputs at once. 
         if (leftTouches > 0 && rightTouches == 0)
         {
             rb.linearVelocityX = -moveSpeed;
