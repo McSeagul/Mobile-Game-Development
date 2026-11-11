@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7236621251967743400}
   - component: {fileID: 2961607865610459412}
   - component: {fileID: 1222549529238454482}
+  - component: {fileID: 3989408763294701849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -193,8 +194,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRules
   linearVelY: 0
-  padForceNum: 6
-  padLogic: {fileID: 7141974171977440150, guid: 745815a4791c7824aa008a24c0eceac9, type: 3}
+  forceApplied: 0
   sprite: {fileID: 0}
   cam: {fileID: 0}
   rb: {fileID: 0}
+--- !u!114 &3989408763294701849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4802370980687013727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5372ee069016a3c42bd61cde34a26656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHP
+  hitPointDisplay: {fileID: 9168944804949744959, guid: 905b1f5fa4a052741b3a39845c80b1e6, type: 3}
+  hitPoints: 3
+  endState: 0
