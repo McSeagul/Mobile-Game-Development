@@ -6,7 +6,8 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    float moveSpeed = 4f;
+    [Header("Movement Speed Var")]
+    public float moveSpeed = 4f;
     float width;
     float height;
     private void Awake()
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         width = (float)Screen.width / 2f;
-        height = (float)Screen.height / 2f;
+        height = (float)Screen.height / 2f; //Get screensize
         
     }
     void Start()
