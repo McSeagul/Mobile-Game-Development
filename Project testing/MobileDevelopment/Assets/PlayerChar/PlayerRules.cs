@@ -7,7 +7,7 @@ public class PlayerRules : MonoBehaviour
     private float xMin, xMax;
     float spriteSize;
     float spriteHeight;
-    float xValid;
+    float xValid; //Calculations to camera limits and sprite bounds
 
 
     [Header("Reference to Pad")]
@@ -71,6 +71,6 @@ public class PlayerRules : MonoBehaviour
     }
     public void appliedForce()
     { 
-        rb.AddForce(transform.up * forceApplied, ForceMode2D.Impulse);
+        rb.AddForce(transform.up * forceApplied, ForceMode2D.Impulse); //Referenced through bouncepad scripts
     }
 }

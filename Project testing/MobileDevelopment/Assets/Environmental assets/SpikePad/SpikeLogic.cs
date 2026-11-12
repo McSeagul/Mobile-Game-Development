@@ -17,7 +17,7 @@ public class SpikeLogic : MonoBehaviour
     {
         if(other.collider.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); //Destroys spike barricade
         }
     }
 
